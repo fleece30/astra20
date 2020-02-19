@@ -1,0 +1,362 @@
+.content {
+    position: absolute;
+    width: 30%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: auto;
+    align-items: center;
+    z-index: 11;
+    font-family: 'Quicksand';
+    text-align: center;
+}
+  
+#home{
+  position: relative;
+}
+.content img{
+    width: 100%;
+}
+
+h3, h4{
+    color: white;
+    text-align: center;
+}
+
+.animate a::after{
+    content: "";
+}
+
+.particle{
+    width: 100%;
+    height: 100vh;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 0;
+    background-position: center top;
+    -moz-background-size: 0 auto;
+    -o-background-size: 0 auto;
+    -webkit-background-size: 0 auto;
+    background-size: 0 auto;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    -moz-background-size: 75% auto;
+    -o-background-size: 75% auto;
+    -webkit-background-size: 75% auto;
+    background-size: 75% auto;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    background-position: center bottom;
+    -moz-background-size: 0 auto;
+    -o-background-size: 0 auto;
+    -webkit-background-size: 0 auto;
+    background-size: 0 auto;
+  }
+}
+@-moz-keyframes pulse {
+  0% {
+    opacity: 0;
+    background-position: center top;
+    -moz-background-size: 0 auto;
+    -o-background-size: 0 auto;
+    -webkit-background-size: 0 auto;
+    background-size: 0 auto;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    -moz-background-size: 75% auto;
+    -o-background-size: 75% auto;
+    -webkit-background-size: 75% auto;
+    background-size: 75% auto;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    background-position: center bottom;
+    -moz-background-size: 0 auto;
+    -o-background-size: 0 auto;
+    -webkit-background-size: 0 auto;
+    background-size: 0 auto;
+  }
+}
+@-ms-keyframes pulse {
+  0% {
+    opacity: 0;
+    background-position: center top;
+    -moz-background-size: 0 auto;
+    -o-background-size: 0 auto;
+    -webkit-background-size: 0 auto;
+    background-size: 0 auto;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    -moz-background-size: 75% auto;
+    -o-background-size: 75% auto;
+    -webkit-background-size: 75% auto;
+    background-size: 75% auto;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    background-position: center bottom;
+    -moz-background-size: 0 auto;
+    -o-background-size: 0 auto;
+    -webkit-background-size: 0 auto;
+    background-size: 0 auto;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    background-position: center top;
+    -moz-background-size: 0 auto;
+    -o-background-size: 0 auto;
+    -webkit-background-size: 0 auto;
+    background-size: 0 auto;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    -moz-background-size: 75% auto;
+    -o-background-size: 75% auto;
+    -webkit-background-size: 75% auto;
+    background-size: 75% auto;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    background-position: center bottom;
+    -moz-background-size: 0 auto;
+    -o-background-size: 0 auto;
+    -webkit-background-size: 0 auto;
+    background-size: 0 auto;
+  }
+}
+
+.scroll-down {
+    margin: 0;
+    position: absolute;
+    top: 90%;
+    width: 70px;
+    height: 70px;
+    z-index: 30;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.scroll-down a {
+    display: block;
+    opacity: 0;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    line-height: 0;
+    font-size: 0;
+    color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    -moz-background-size: 0 auto;
+    -o-background-size: 0 auto;
+    -webkit-background-size: 0 auto;
+    background-size: 0 auto;
+    -webkit-animation: pulse 1.5s 0s infinite normal ease forwards;
+    -moz-animation: pulse 1.5s 0s infinite normal ease forwards;
+    -o-animation: pulse 1.5s 0s infinite normal ease forwards;
+    animation: pulse 1.5s 0s infinite normal ease forwards;
+    background-image: url("https://jamesmuspratt.com/codepen/img/arrow-down.svg");
+    background-repeat: no-repeat;
+    z-index: 30;
+}
+.scroll-down a:before, .scroll-down a:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("https://jamesmuspratt.com/codepen/img/arrow-down.svg") no-repeat center top;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    z-index: 30;
+}
+.scroll-down a:before {
+    -webkit-animation: pulse 1.5s 0.25s infinite normal ease forwards;
+    -moz-animation: pulse 1.5s 0.25s infinite normal ease forwards;
+    -o-animation: pulse 1.5s 0.25s infinite normal ease forwards;
+    animation: pulse 1.5s 0.25s infinite normal ease forwards;
+    z-index: 30;
+}
+.scroll-down a:after {
+    -webkit-animation: pulse 1.5s 0.5s infinite normal ease forwards;
+    -moz-animation: pulse 1.5s 0.5s infinite normal ease forwards;
+    -o-animation: pulse 1.5s 0.5s infinite normal ease forwards;
+    animation: pulse 1.5s 0.5s infinite normal ease forwards;
+    z-index: 30;
+}
+.scroll-down a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 30;
+}
+
+.btn-grad {
+    border: 2px solid transparent;
+    color: white;
+    background: linear-gradient(-45deg, #1FA2FF,#f857a8);
+    position: relative;
+    /* top: 100%;
+    left: 50%;
+    transform: translateX(-50%); */
+    font-size: 11px;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    padding: 8px 14px;
+    border-radius: 40px;
+    font-family: 'Quicksand',sans-serif;
+    font-weight: bold;
+    margin-top: 0.5em;
+    border-color: transparent;
+    background: linear-gradient(-45deg, #f857a8, #1FA2FF, #f857a8);
+    animation: gradient 10s ease infinite;
+    background-size: 400% 400%;
+}
+
+.btn-grad:hover{
+    animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media screen and (max-width: 411px){
+    .content{
+        width: 70%;
+    }
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  min-height: 100vh;
+}
+
+.image{
+  background-image:url('nasa2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.about{
+  display: grid;
+  grid-template-rows: auto auto auto;
+  margin-top: 3.5em;
+  padding: 0px 50px;
+  min-height: 100vh;
+}
+
+#heading{
+  font-family: 'Montserrat';
+  display: inline;
+  border-bottom: 2px solid #74b9ff;
+}
+
+@media screen and (max-width: 411px){
+  .image{
+    display: none;
+  }
+  .grid-container{
+    display: grid;
+    grid-template-columns: auto;
+    height: auto;
+  }
+}
+
+
+
+
+.card-img-top {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 2vh 0 2vh 0;
+}
+
+.card{
+height: auto;
+}
+/* #inputEmail4{
+width: 100%;
+} */
+.contactus .flex-container{
+position: relative;
+left: 50%;
+transform: translateX(-25%);
+top:5%;
+}
+
+.form-row label{
+color: #fff;
+font-weight: 700;
+}
+
+.card-title{
+border-bottom: 2px solid #f857a8;
+padding-bottom: 1vh;
+}
+
+.tracksGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 180px;
+  row-gap: 30px;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 411px){
+  .tracksGrid{
+    grid-template-columns: 1fr;
+  }
+}
