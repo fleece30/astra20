@@ -51,7 +51,7 @@ h1 {
     height: 100px;
 }
 
-@media screen and (max-width: 411px){
+@media screen and (max-width: 768px){
     .countdown-head{
         font-size: 20px;
     }

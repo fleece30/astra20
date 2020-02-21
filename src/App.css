@@ -2,7 +2,12 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 html, body{
   scroll-behavior: smooth;
+  display: contents;
+  overflow-x: hidden;
 }
-::-webkit-scrollbar{
-  display: none;
+
+@media screen and (max-width: 768px){
+  ::-webkit-scrollbar{
+    display: none;
+  }
 }
