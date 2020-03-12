@@ -378,6 +378,14 @@ padding-bottom: 1vh;
   margin-top: 40px;
 }
 
+.comingSoon{
+  color: #fd79a8;
+  grid-column: 2 / 4;
+  font-size: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
+
 @media screen and (max-width: 768px){
   #tracks{
     padding-left: 25px!important;
@@ -385,6 +393,13 @@ padding-bottom: 1vh;
   }
   .tracksGrid{
     grid-template-columns: 1fr;
+  }
+  .comingSoon{
+    color: #fd79a8;
+    grid-column: 1;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
   }
 }
 
@@ -624,7 +639,7 @@ padding-bottom: 1vh;
   margin: 0 40px;
   height: 0;
   overflow: hidden;
-  z-index: -1;
+  z-index: 0;
   position: relative;
   opacity: 0;
   -webkit-transition: .4s ease;
@@ -673,6 +688,11 @@ padding-bottom: 1vh;
   display: none;
 }
 
+.panel-content a{
+  color: #fd79a8;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 768px){
   #faqs{
     padding-left: 25px!important;
@@ -715,6 +735,18 @@ padding-bottom: 1vh;
 
 /* Contact us ends */
 
+.social_icons{
+  display: flex;
+  justify-content: center;
+}
+
+.social_icons img{
+  width: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  margin: 10px 20px;
+}
+
 #footer{
   max-height: 50px;
   background-color: black;
@@ -722,3 +754,60 @@ padding-bottom: 1vh;
   text-align: center;
   padding: 5px;
 }
+
+#aboutseds, #tracks, #highlights, #faq, #contactus{
+  text-align: justify;
+}
+
+/* Download Button */
+.myButt {
+  outline: none;
+  border: none;
+  padding: 20px;
+  display: block;
+  margin: 50px auto;
+  width: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: transparent;
+  position: relative;
+  color: #b2bec3;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+}
+
+.one {
+  overflow: hidden;
+  color: #b2bec3;
+}
+.one .insider {
+  background-color: #fff;
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  left: -135px;
+  transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+  -o-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+}
+.one:hover {
+  background-color: #F44336;
+  border-color: #fff;
+  color: #fff;
+}
+.one:hover .insider {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  left: 138px;
+}
+
+/* Download Button end */

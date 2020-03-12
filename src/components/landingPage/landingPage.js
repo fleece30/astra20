@@ -6,8 +6,11 @@ import Countdown from '../timer/timer';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import Fade from 'react-reveal/Fade';
+import ReactHtmlParser from 'react-html-parser';
 
 const mobile = (window.innerWidth <= 768) ? true : false;
+
+const str = '<a href="https://astra2020.hackerearth.com/" target="_blank" rel="noopener noreferrer">Hackerearth</a>';
 
 
 const hackImages = [
@@ -148,17 +151,17 @@ const questions = [
     {
         "id": "2",
         "ques": "How much is the participation fee?",
-        "ans": "Teams can submit their abstracts and register for free. A nominal fee of Rs. __ is to be paid to attend the final stage of the hack in VIT, Vellore which includes refreshments."
+        "ans": "Teams can submit their abstracts and register for free. A nominal fee of Rs. 100 is to be paid to attend the final stage of the hack in VIT, Vellore which includes refreshments."
     },
     {
         "id": "3",
         "ques": "How can I register?",
-        "ans": "You can visit [hackerearth link] to register for Astra 2020 irrespective of your college or country of origin."
+        "ans": "You can visit "+ str +" to register for Astra 2020 irrespective of your college or country of origin."
     },
     {
         "id": "4",
         "ques": "Is it a purely coding-based hackathon?",
-        "ans": "No. The problem statements are designed such that there's something for all backgrounds and we encourage multi-disciplinary team formation. "
+        "ans": "No. The problem statements are designed such that there's something for all backgrounds and we encourage multi-disciplinary team formation."
     },
     {
         "id": "5",
@@ -178,7 +181,7 @@ const questions = [
     {
         "id": "8",
         "ques": "What if I don't have a team?",
-        "ans": "Worry not. You can register on [hackerearth link] and we'll do the team formation as suitable."
+        "ans": "Worry not. You can register on "+ str +" and we'll do the team formation as suitable."
     },
     {
         "id": "9",
@@ -188,7 +191,7 @@ const questions = [
     {
         "id": "10",
         "ques": "Whom do I contact for more information?",
-        "ans": "You can contact us on Facebook or Instagram or mail us at vit.sedsindia@gmail.com."
+        "ans": "You can contact us on Facebook or Instagram or mail us at <a href='mailto:vit.sedsindia@gmail.com'>vit.sedsindia@gmail.com</a>."
     },
     {
         "id": "11",
@@ -215,6 +218,13 @@ const LandingPage = () => {
                         </Fade>
                     )
                 }
+                <Fade bottom>
+                    <div className="comingSoon">
+                        <h1>Problem Statements Out Now!</h1>
+                        <a href={process.env.PUBLIC_URL + '/ASTRA_PS.pdf'} download style={{textDecoration: "none"}}> <button type="button" className="btn-grad" name="button" target="_blank" style={{padding: "15px", width: "200px", outline:"none"}}>
+                        Download</button></a>
+                    </div>
+                </Fade>
             </div>
         )
     }
@@ -265,7 +275,7 @@ const LandingPage = () => {
                             <input id={question.id} type="checkbox" className="panel"></input>
                             <div className="plus">+</div>
                             <label htmlFor={question.id} className="panel-title">{question.ques}</label>
-                            <div className="panel-content">{question.ans}</div>
+                            <div className="panel-content">{ReactHtmlParser(question.ans)}</div>
                         </div>
                     )
                 }
@@ -424,6 +434,11 @@ const LandingPage = () => {
                     <h2>The telephone is a good way to talk to people without having to offer them a drink. <br/>So, Ring us up @</h2>
                     <h2><a href="tel:+919003387780" style={{color: "#fd79a8", textDecoration: "none"}}>+91-9003387780</a> - Aditya Bhartia (Chair - SEDS VIT)</h2>
                     <h2><a href="tel:+918291142445" style={{color: "#fd79a8", textDecoration: "none"}}>+91-8291142445</a> - Ghanishtha Bhatti (Director of Events - SEDS VIT)</h2>
+                    <div className="social_icons">
+                        <div><a href="https://www.facebook.com/SEDSVIT/?ref=br_rs" target="_blank" rel="noopener noreferrer"><img src={process.env.PUBLIC_URL + '/images/facebook.svg'} alt=""></img></a></div>
+                        <div><a href="https://www.instagram.com/sedsvit/?hl=en" target="_blank" rel="noopener noreferrer"><img src={process.env.PUBLIC_URL + '/images/instagram.svg'} alt=""></img></a></div>
+                        <div><a href="https://www.linkedin.com/company/students-for-exploration-and-development-of-space/" target="_blank" rel="noopener noreferrer"><img src={process.env.PUBLIC_URL + '/images/linkedin.svg'} alt=""></img></a></div>
+                    </div>
                 </div>
                 <div>
                     <img src={process.env.PUBLIC_URL + '/images/contact.svg'} alt=""></img>
@@ -432,7 +447,7 @@ const LandingPage = () => {
         </div>
         {/* Contact Us ends */}
         <div id="footer">
-            &copy; ASTRA 2020 - SEDS VIT<br/>Made with &hearts; by <a href="https://www.linkedin.com/in/abhishek-yadav-a56b6385/" rel="noopener noreferrer" target="_blank">Abhishek</a> and <a href="https://www.linkedin.com/in/prakhar-mehta-983494180/" rel="noopener noreferrer" target="_blank">Prakhar</a>
+            &copy; ASTRA 2020 - SEDS VIT<br/>Made with &hearts; by <a href="https://www.linkedin.com/in/abhishek-yadav-a56b6385/" rel="noopener noreferrer" target="_blank">Abhishek</a>, <a href="https://www.linkedin.com/in/prakhar-mehta-983494180/" rel="noopener noreferrer" target="_blank">Prakhar</a> and <a href="https://www.linkedin.com/in/shubham-aniket-5766b5178/" rel="noopener noreferrer" target="_blank">Shubham</a>
         </div>
         </div>
     )

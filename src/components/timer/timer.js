@@ -33,35 +33,35 @@ class Countdown extends React.Component {
     }
 
     render() {
-        const { days, hours, minutes, seconds } = this.state;
+        let { days, hours, minutes, seconds } = this.state;
 
         if (!seconds) {
-            return null;
+            seconds = 0;
         }
 
         return (
             <div>
                 <h1 className="countdown-head">Coming&nbsp;&nbsp;to&nbsp;&nbsp;you&nbsp;&nbsp;in</h1>
                 <div className="countdown-wrapper">
-                    {days && (
+                    {(
                         <div className="countdown-item">
                             {days}
                             <span>days</span>
                         </div>
                     )}
-                    {hours && (
+                    {(
                         <div className="countdown-item">
                             {hours}
                             <span>hours</span>
                         </div>
                     )}
-                    {minutes && (
+                    {(
                         <div className="countdown-item">
                             {minutes}
                             <span>minutes</span>
                         </div>
                     )}
-                    {seconds && (
+                    {(
                         <div className="countdown-item">
                             {seconds}
                             <span>seconds</span>
