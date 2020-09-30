@@ -26,7 +26,11 @@ class Countdown extends React.Component {
     }, 1000);
   }
 
-  //Add code here
+  componentWillUnmount() {
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
+  }
 
   render() {
     let { days, hours, minutes, seconds } = this.state;
