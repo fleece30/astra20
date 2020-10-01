@@ -338,7 +338,42 @@ const LandingPage = () => {
     <div>
       {/* Landing page */}
       <div id="home">
-        {/* here */}
+        <Particles
+          className="particle"
+          params={{
+            particles: {
+              number: {
+                value: mobile ? 50 : 100,
+                density: {
+                  enable: true,
+                  value_area: mobile ? 700 : 500,
+                },
+              },
+              size: {
+                value: 2,
+              },
+              color: {
+                value: "#00f2ff",
+              },
+            },
+            interactivity: {
+              events: {
+                onhover: {
+                  enable: true,
+                  mode: "repulse",
+                },
+              },
+            },
+          }}
+          style={{
+            position: "absolute",
+            backgroundColor: "#000011",
+            left: "0",
+            top: "0",
+            zIndex: "1",
+            height: "100vh",
+          }}
+        />
 
         <div className="content">
           <img
